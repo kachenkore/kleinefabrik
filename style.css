@@ -1,0 +1,410 @@
+/* Header and Navigation */
+header {
+    background-color: #F01368; /* Vibrant pink for header */
+    color: white;
+    padding: 10px 0;
+	display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Adjusts spacing between items */
+
+}
+
+.header-logo {
+	padding-left: 50px;
+    height: 50px; /* Or your desired size */
+    width: auto; /* Keeps the aspect ratio */
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Hero Section with Fixed Parallax Background */
+#home {
+    position: relative;
+    height: 85vh; /* Full viewport height */
+    background-attachment: fixed; /* Fixed parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Background Carousel */
+.background-carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* To overlay the hero section */
+    opacity: 0.5; /* Adjust the opacity to your preference */
+    z-index: -1; /* Behind the content */
+}
+
+/* Background Slide */
+.background-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Above the background */
+    text-align: center;
+    padding: 20px;
+    color: #fff; /* Text color for contrast */
+}
+
+/* Additional styling for the heading and subheading */
+.hero-content h1 {
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    margin-bottom: 20px;
+}
+
+/* Reset some default styles */
+body, h1, h3, p, ul, li {
+    margin: 0;
+	text-align: center;
+}
+
+h2 {
+    padding-top: 20px; /* Adjust the padding as needed */
+    /* other styles */
+}
+
+h2 + p {
+    text-align: center;
+    padding-end: 20px; /* Adjust the padding as needed */
+
+    font-size: 1rem; /* Adjust the font size as needed */
+    /* other styles */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000026; /* Deep navy blue background */
+}
+
+.parallax-background {
+    position: relative;
+    background-image: url('pro.jpg'); /* Replace with your image */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px; /* Adjust as needed */
+}
+
+.parallax-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust color based on your background */
+}
+
+
+/* Events Timeline */
+#events {
+    background-color: #f2f2f2; /* Adjust background color if needed */
+    position: relative;
+    padding: 20px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px; /* Adjusted for wider overall width */
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #F01368; /* Timeline color */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+	z-index: 0; /* Behind the content */
+}
+
+.timeline-item {
+    margin: 20px 0;
+    position: relative;
+    width: 100%; /* Adjusted for full-width */
+	z-index: 1; /* Behind the content */
+	}
+
+.timeline-item .card {
+    width: 70%; /* Adjusted width for more text space */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left; /* Align text to left */
+    position: relative;
+    margin-bottom: 1em;
+	transition: transform 0.3s ease; /* Smooth transition for size change */
+    transform: scale(0.9); /* Start smaller, for example, 90% of the original size */
+}
+
+.timeline-item .card:hover {
+    transform: scale(1); /* Original size on hover */
+}
+
+.timeline-item.left .card {
+    left: 5%; /* Adjust position for left-side cards */
+}
+
+.timeline-item.right .card {
+    left: 25%; /* Adjust position for right-side cards */
+}
+
+.timeline-item .card img {
+    display: block;       /* Makes the image a block-level element */
+    width: 100px;         /* Set a fixed width for all images */
+    height: auto;         /* Maintains the aspect ratio of the image */
+    margin: 0 auto;       /* Centers the image horizontally */
+    border-radius: 5px;   /* Optional: for rounded corners */
+}
+
+.event {
+    display: none;
+    /* other styles for event cards */
+}
+
+.event:nth-child(-n+3) {
+    display: block; /* Show only the first three events initially */
+}
+
+#loadMore {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    /* Style the button as needed */
+}   
+
+/* Characteristics and Bundles Sections */
+#characteristics, #bundles {
+    background-color: #000026; /* Dark background */
+    color: white;
+    padding: 20px 0; /* Added padding for these sections */
+}
+.card-container {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    flex-wrap: wrap; /* Allow cards to wrap */
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.card {
+    box-sizing: border-box;
+    flex: 0 0 auto; /* Prevent cards from growing or shrinking */
+    width: 20%; /* Adjust card width as necessary */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.card-image {
+    width: 90px; /* Adjust the width as needed */
+    border-radius: 5px; /* Optional: for rounded corners */
+    /* Add any additional styling as needed */
+}
+
+
+.card-content {
+    /* If you have specific content inside each card, style it here */
+    flex: 1; /* Causes the content to expand and fill the available space */
+    /* Other styles for the content... */
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #F01368; /* Accent color for headings */
+}
+
+.card p {
+    color: #666;
+}
+
+/* FAQ Section Styles - Adjusted to match provided CSS excerpt */
+#faq {
+    margin: 20px;
+	background-color: #f2f2f2;
+    font-family: 'Arial', sans-serif; /* Adjust to match your font, if different */
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the FAQ items in the container */
+    gap: 10px;
+    margin: 0 auto; /* Centers the container itself */
+	padding-bottom: 50px; /* Adjust this value as needed */
+}
+
+.faq-item {
+    width: 70%; /* Each FAQ item is 70% of the screen width */
+    margin: 0 auto; /* Centers each FAQ item */
+}
+
+.accordion {
+    background-color: #000026;
+    color: white; /* White text for contrast */
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    transition: 0.4s;
+    border-radius: 5px; /* Rounded corners for a modern look */
+}
+
+.active, .accordion:hover {
+    background-color: #F01368; /* Slightly darker shade for active/hover state */
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+    margin: 0;
+	
+}
+
+
+
+/* Contact Section */
+#contact {please
+    background-color: #000026;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #F01368;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    #home, .hero-text, .timeline-item {
+        max-width: 100%;
+    }
+
+    #home {
+        flex-direction: column;
+    }
+	
+	.header-logo {
+        height: 40px; /* Smaller logo for mobile */
+    }
+
+    .timeline-item .card {
+        width: 80%; /* Larger width on smaller screens */
+        left: 10%; /* Adjust left position for mobile */
+    }
+    .timeline-item.right .card {
+        left: 10%; /* Same left position for right-side cards on mobile */
+    }
+
+    .card-container {
+        flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+        overflow-x: hidden; /* Disable horizontal scrolling on smaller screens */
+        justify-content: flex-start; /* Align to start for wrapped items */
+    }
+
+    .card {
+        flex: 1 0 80%; /* Cards take 80% of the container's width */
+        margin: 10px auto; /* Center cards in the container */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+	
+	.parallax-background {
+        background-attachment: scroll;
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
