@@ -163,7 +163,7 @@ body {
 	}
 
 .timeline-item .card {
-    width: 70%; /* Adjusted width for more text space */
+    width: 40%; /* Adjusted width for more text space */
     padding: 20px;
     background-color: white;
     border: 1px solid #ddd;
@@ -185,7 +185,7 @@ body {
 }
 
 .timeline-item.right .card {
-    left: 25%; /* Adjust position for right-side cards */
+    left: 55%; /* Adjust position for right-side cards */
 }
 
 .timeline-item .card img {
