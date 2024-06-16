@@ -241,7 +241,7 @@ body {
 #characteristics, #bundles {
     background-color: #000026; /* Dark background */
     color: white;
-    padding: 100px 0; /* Added padding for these sections */
+    padding: 40px 0 80px; /* Added padding for these sections */
 }
 .card-container {
     display: flex;
@@ -465,10 +465,12 @@ footer {
 .social-icon img {
     height: 24px;
     width: 24px;
+	filter: overlay-color('#FFFFFF');
 }
 
 .social-icon img:hover {
     opacity: 0.7;
+	filter: overlay-color('#118800');
 }
 
 /* Responsive Design */
