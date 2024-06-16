@@ -1,27 +1,36 @@
 /* Header and Navigation */
+body {
+    font-family: Arial, sans-serif;
+}
+
 header {
     background-color: #F01368; /* Vibrant pink for header */
     color: white;
     padding: 10px 0;
-	display: flex;
+    display: flex;
     align-items: center; /* Aligns items vertically in the center */
     justify-content: space-between; /* Adjusts spacing between items */
-	height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensures the header is on top */
+    height: 60px;
 }
 
 .header-logo {
-	padding-left: 50px;
-    height: 50px; /* Or your desired size */
+    padding-left: 50px;
+    height: 40px; /* Or your desired size */
     width: auto; /* Keeps the aspect ratio */
 }
 
 nav ul {
     list-style: none;
     text-align: center;
+    display: flex;
+    margin-right: 50px;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -39,15 +48,20 @@ nav ul li a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 60px; /* Offset for the fixed header */
 }
 
 /* Background Carousel */
 .background-carousel {
     width: 100%;
     height: 100%;
-    position: absolute; /* To overlay the hero section */
     opacity: 0.5; /* Adjust the opacity to your preference */
     z-index: -1; /* Behind the content */
+	position: relative;
+    background-image: url('bg.png'); /* Replace with your image */
+    background-attachment: fixed;
+    background-size: cover;
+    height: 85vh; /* Adjust as needed */
 }
 
 /* Background Slide */
