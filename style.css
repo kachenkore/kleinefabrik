@@ -10,11 +10,9 @@ header {
     display: flex;
     align-items: center; /* Aligns items vertically in the center */
     justify-content: space-between; /* Adjusts spacing between items */
-    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000; /* Ensures the header is on top */
-    height: 60px;
 }
 
 .header-logo {
@@ -32,6 +30,7 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+	
 }
 
 nav ul li a {
@@ -48,7 +47,7 @@ nav ul li a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 60px; /* Offset for the fixed header */
+    margin-top: -30px; /* Offset for the fixed header */
 }
 
 /* Background Carousel */
@@ -439,9 +438,37 @@ body {
 /* Footer */
 footer {
     background-color: #F01368;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.footer-logo {
+    height: 40px;
+	padding-left: 50px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+	padding-right: 50px;
+}
+
+.footer-content a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.social-icon img {
+    height: 24px;
+    width: 24px;
+}
+
+.social-icon img:hover {
+    opacity: 0.7;
 }
 
 /* Responsive Design */
